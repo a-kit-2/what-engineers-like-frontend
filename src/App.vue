@@ -40,12 +40,47 @@ export default {
       },
       words: [],
       numOfWords: 0,
+      isPosting: false,
     };
   },
   mounted: function() {
     this.getLikes();
   },
   methods: {
+    beginPost() {
+      this.isPosting = true;
+    },
+    endPost() {
+      this.isPosting = false;
+    },
+    newLike() {
+      if (!this.isPosting) {
+        this.beginPost();
+        axios
+          .post(
+            `${process.env.VUE_APP_BACKEND_URL}/new_like`,
+            {
+              like: {
+                name: this.like.name,
+                count: 1,
+              },
+            },
+            { withCredentials: true }
+          )
+          .then((response) => {
+            if (response.data.create_like || response.data.add_count) {
+              this.like.name = "";
+              this.getLikes();
+            } else {
+              alert("投稿に失敗しました。");
+            }
+          })
+          .chatch((e) => {
+            alert(e);
+          });
+        this.endPost();
+      }
+    },
     getLikes() {
       axios
         .get(`${process.env.VUE_APP_BACKEND_URL}/show_likes`)
@@ -58,30 +93,6 @@ export default {
             });
           } else {
             alert("データ取得に失敗しました。");
-          }
-        })
-        .chatch((e) => {
-          alert(e);
-        });
-    },
-    newLike() {
-      axios
-        .post(
-          `${process.env.VUE_APP_BACKEND_URL}/new_like`,
-          {
-            like: {
-              name: this.like.name,
-              count: 1,
-            },
-          },
-          { withCredentials: true }
-        )
-        .then((response) => {
-          if (response.data.create_like || response.data.add_count) {
-            this.like.name = "";
-            this.getLikes();
-          } else {
-            alert("投稿に失敗しました。");
           }
         })
         .chatch((e) => {
