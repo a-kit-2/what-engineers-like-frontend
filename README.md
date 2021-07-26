@@ -1,24 +1,46 @@
-# what-engineers-like-frontend
+# アプリケーション名
 
-## Project setup
-```
-npm install
-```
+エンジニアは何が好き？
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# アプリケーションの概要
 
-### Compiles and minifies for production
-```
-npm run build
-```
+エンジニアが好きな技術を投稿してもらい、その数をもとにワードクラウドを生成します。
+一目でどの技術が人気があるかわかります。
 
-### Lints and fixes files
-```
-npm run lint
-```
+# URL
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[アプリケーション]()
+
+[バックエンド]()
+
+# テスト用アカウント
+
+メールアドレス: test@test.test
+
+パスワード: password
+
+# 利用方法
+
+1. 
+2. 
+3. 
+
+# 目指した課題解決
+
+# 要件定義
+
+# 実装した機能についての GIF と説明
+
+# 実装予定の機能
+
+# 設計
+
+## ユースケース図
+
+##　DB設計
+
+## クラス図 
+
+## UI設計
+
+# ローカルでの動作方法
