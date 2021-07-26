@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-center">
-        <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > (numOfWords / 100) * 20 ? 'var(--main-color)' : weight > (numOfWords / 100) * 10 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
+        <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > (numOfWords / 100) * 10 ? 'var(--main-color)' : weight > (numOfWords / 100) * 5 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
       </div>
       <div class="row m-5">
         <div class="col-10">
@@ -54,7 +54,7 @@ export default {
       this.isPosting = false;
     },
     newLike() {
-      if (!this.isPosting) {
+      if (!this.isPosting && this.like.name != "") {
         this.beginPost();
         axios
           .post(
