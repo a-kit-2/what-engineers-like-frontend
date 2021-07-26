@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-center">
-        <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > 100 ? 'var(--main-color)' : weight > 50 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
+        <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > (numOfWords / 100) * 20 ? 'var(--main-color)' : weight > (numOfWords / 100) * 10 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
       </div>
       <div class="row m-5">
         <div class="col-10">
@@ -23,7 +23,6 @@
         </div>
       </div>
     </div>
-    {{ words }}
   </div>
 </template>
 
@@ -40,6 +39,7 @@ export default {
         name: "",
       },
       words: [],
+      numOfWords: 0,
     };
   },
   mounted: function() {
@@ -53,8 +53,8 @@ export default {
           if (response.data.show_likes) {
             this.words = [];
             response.data.likes.forEach((like) => {
-              console.log(like);
               this.words.push([like.name, like.count]);
+              this.numOfWords += like.count;
             });
           } else {
             alert("データ取得に失敗しました。");
