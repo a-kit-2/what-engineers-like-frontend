@@ -9,7 +9,7 @@
 
 # URL
 
-[アプリケーション]()
+[アプリケーション](https://what-engineers-like.herokuapp.com/)
 
 [バックエンド](https://github.com/a-kit-2/what-engineers-like-backend)
 
@@ -24,10 +24,6 @@
 
 # 要件定義
 
-## アウトライン
-
-[what-engineers-like-outline.pdf](https://github.com/a-kit-2/what-engineers-like-frontend/files/6875041/what-engineers-like-outline.pdf)
-
 ##　マインドマップ
 
 <img width="1341" alt="what-engineers-like-mindmap" src="https://user-images.githubusercontent.com/74124955/126923410-3ae73fb3-4242-414f-aa81-577072f05ecb.png">
@@ -35,6 +31,9 @@
 # 実装した機能についての GIF と説明
 
 # 実装予定の機能
+
+- どれだけの投稿があるのか数値で表示できる様にする。
+- タグをつけて分類する。
 
 # 設計
 
@@ -44,7 +43,11 @@
 
 ## DB設計
 
+![er_diagram](https://user-images.githubusercontent.com/74124955/126923589-e35e7c0c-47d0-4dae-bbf8-50705f744c7d.png)
+
 ## クラス図 
+
+
 
 ## UI設計
 
