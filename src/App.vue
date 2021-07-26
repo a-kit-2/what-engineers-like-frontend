@@ -10,37 +10,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-center">
-        <vue-word-cloud
-          style="height: 480px; width: 640px;"
-          :words="[
-            ['MySQL', 11],
-            ['Java', 2],
-            ['C', 3],
-            ['python', 4],
-            ['Javascript', 5],
-            ['Ruby', 6],
-            ['Rails', 17],
-            ['Vue.js', 28],
-            ['MySQL', 21],
-            ['Java', 21],
-            ['C', 31],
-            ['python', 41],
-            ['Javascript', 15],
-            ['Ruby', 61],
-            ['Rails', 171],
-            ['Vue.js', 218],
-            ['MySQL', 111],
-            ['Java', 21],
-            ['C', 13],
-            ['python', 114],
-            ['Javascript', 15],
-            ['Ruby', 16],
-            ['Rails', 37],
-            ['Vue.js', 48],
-          ]"
-          :color="([, weight]) => (weight > 100 ? 'var(--main-color)' : weight > 50 ? 'var(--sub-color)' : 'var(--accent-color)')"
-          font-family="Dela Gothic One"
-        />
+        <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > 100 ? 'var(--main-color)' : weight > 50 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
       </div>
       <div class="row m-5">
         <div class="col-10">
@@ -81,8 +51,11 @@ export default {
         .get(`${process.env.VUE_APP_BACKEND_URL}/show_likes`)
         .then((response) => {
           if (response.data.show_likes) {
-            this.words = response.data.likes;
-            console.log(response);
+            this.words = [];
+            response.data.likes.forEach((like) => {
+              console.log(like);
+              this.words.push([like.name, like.count]);
+            });
           } else {
             alert("データ取得に失敗しました。");
           }
