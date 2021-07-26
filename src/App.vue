@@ -45,23 +45,69 @@
       <div class="row m-5">
         <div class="col-10">
           <div class="form-group">
-            <input type="text" class="form-control input-form" id="input" placeholder="エンジニアとして好きなものを自由に入力してください。何度でも入力できます。" />
+            <input v-model="like.name" type="text" class="form-control input-form" id="input" placeholder="エンジニアとして好きなものを自由に入力してください。何度でも入力できます。" />
           </div>
         </div>
         <div class="col-2">
-          <button type="submit" class="btn btn-primary w-100 submit-btn">好き！</button>
+          <button @click="newLike()" type="submit" class="btn btn-primary w-100 submit-btn">好き！</button>
         </div>
       </div>
     </div>
+    {{ this.like }}
   </div>
 </template>
 
 <script>
 import VueWordCloud from "vuewordcloud";
+import axios from "axios";
 
 export default {
   name: "App",
   components: { [VueWordCloud.name]: VueWordCloud },
+  data() {
+    return {
+      like: {
+        name: "",
+      },
+      words: [],
+    };
+  },
+  mounted: function() {
+    axios
+      .get(`${process.env.VUE_APP_BACKEND_URL}/show_likes`, {
+        like: {
+          name: this.like.name,
+          count: 1,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .chatch((e) => {
+        alert(e);
+      });
+  },
+  methods: {
+    newLike() {
+      axios
+        .get(
+          `${process.env.VUE_APP_BACKEND_URL}/new_like`,
+          {
+            like: {
+              name: this.like.name,
+              count: 1,
+            },
+          },
+          { withCredentials: true }
+        )
+        .then((response) => {
+          console.log(response);
+        })
+        .chatch((e) => {
+          alert(e);
+        });
+    },
+  },
 };
 </script>
 
