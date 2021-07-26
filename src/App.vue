@@ -75,7 +75,7 @@ export default {
               alert("投稿に失敗しました。");
             }
           })
-          .chatch((e) => {
+          .catch((e) => {
             alert(e);
           });
         this.endPost();
@@ -87,6 +87,7 @@ export default {
         .then((response) => {
           if (response.data.show_likes) {
             this.words = [];
+            this.numOfWords = 0;
             response.data.likes.forEach((like) => {
               this.words.push([like.name, like.count]);
               this.numOfWords += like.count;
@@ -95,7 +96,7 @@ export default {
             alert("データ取得に失敗しました。");
           }
         })
-        .chatch((e) => {
+        .catch((e) => {
           alert(e);
         });
     },
