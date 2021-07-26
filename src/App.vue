@@ -21,8 +21,24 @@
             ['Ruby', 6],
             ['Rails', 17],
             ['Vue.js', 28],
+            ['MySQL', 21],
+            ['Java', 21],
+            ['C', 31],
+            ['python', 41],
+            ['Javascript', 15],
+            ['Ruby', 61],
+            ['Rails', 171],
+            ['Vue.js', 218],
+            ['MySQL', 111],
+            ['Java', 21],
+            ['C', 13],
+            ['python', 114],
+            ['Javascript', 15],
+            ['Ruby', 16],
+            ['Rails', 37],
+            ['Vue.js', 48],
           ]"
-          :color="([, weight]) => (weight > 10 ? 'var(--main-color)' : weight > 5 ? 'var(--sub-color)' : 'var(--accent-color)')"
+          :color="([, weight]) => (weight > 100 ? 'var(--main-color)' : weight > 50 ? 'var(--sub-color)' : 'var(--accent-color)')"
           font-family="Dela Gothic One"
         />
       </div>
