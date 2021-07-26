@@ -53,7 +53,7 @@
         </div>
       </div>
     </div>
-    {{ this.like }}
+    {{ words }}
   </div>
 </template>
 
@@ -73,24 +73,27 @@ export default {
     };
   },
   mounted: function() {
-    axios
-      .get(`${process.env.VUE_APP_BACKEND_URL}/show_likes`, {
-        like: {
-          name: this.like.name,
-          count: 1,
-        },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .chatch((e) => {
-        alert(e);
-      });
+    this.getLikes();
   },
   methods: {
+    getLikes() {
+      axios
+        .get(`${process.env.VUE_APP_BACKEND_URL}/show_likes`)
+        .then((response) => {
+          if (response.data.show_likes) {
+            this.words = response.data.likes;
+            console.log(response);
+          } else {
+            alert("データ取得に失敗しました。");
+          }
+        })
+        .chatch((e) => {
+          alert(e);
+        });
+    },
     newLike() {
       axios
-        .get(
+        .post(
           `${process.env.VUE_APP_BACKEND_URL}/new_like`,
           {
             like: {
@@ -101,7 +104,12 @@ export default {
           { withCredentials: true }
         )
         .then((response) => {
-          console.log(response);
+          if (response.data.create_like || response.data.add_count) {
+            this.like.name = "";
+            this.getLikes();
+          } else {
+            alert("投稿に失敗しました。");
+          }
         })
         .chatch((e) => {
           alert(e);
