@@ -9,7 +9,7 @@
     "dev-build": "vue-cli-service build --mode development",
     "prod-build": "vue-cli-service build --mode production",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
     "start": "node server.js"
   },
