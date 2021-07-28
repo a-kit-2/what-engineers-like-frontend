@@ -5,12 +5,12 @@ import VueAnalytics from "vue-analytics";
 
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
-
 Vue.use(VueAnalytics, {
   id: "G-1TNZ7QX62E",
   router,
 });
+
+new Vue({
+  router,
+  render: (h) => h(App),
+}).$mount("#app");
