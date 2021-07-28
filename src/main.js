@@ -3,12 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import VueAnalytics from "vue-analytics";
 
+Vue.config.productionTip = false;
+
 Vue.use(VueAnalytics, {
-  id: "G-1TNZ7QX62E",
+  id: "G-99QZ92GCV0",
   router,
 });
-
-Vue.config.productionTip = false;
 
 new Vue({
   router,
