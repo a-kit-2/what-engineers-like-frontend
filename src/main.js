@@ -1,6 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import VueAnalytics from "vue-analytics";
+
+Vue.use(VueAnalytics, {
+  id: "G-1TNZ7QX62E",
+  router,
+});
 
 Vue.config.productionTip = false;
 
