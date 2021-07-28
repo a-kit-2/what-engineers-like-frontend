@@ -6,7 +6,7 @@ import VueAnalytics from "vue-analytics";
 Vue.config.productionTip = false;
 
 Vue.use(VueAnalytics, {
-  id: "G-99QZ92GCV0",
+  id: "G-KKWC3Z231X",
   router,
 });
 
