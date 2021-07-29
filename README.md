@@ -90,6 +90,8 @@
 | ---- | ---- |
 |  TD  |  TD  |
 |  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
 
 ## API設計
 
