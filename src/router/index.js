@@ -10,7 +10,7 @@ export default new VueRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "WordCloud",
       component: WordCloud,
     },
   ],

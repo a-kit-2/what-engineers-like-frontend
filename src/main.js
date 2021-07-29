@@ -5,7 +5,7 @@ import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueGtag, { config: { id: "G-KKWC3Z231X", router } });
+Vue.use(VueGtag, { config: { id: "G-KKWC3Z231X" } });
 
 new Vue({
   router,
