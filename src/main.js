@@ -11,5 +11,8 @@ new Vue({
 }).$mount("#app");
 
 Vue.use(VueAnalytics, {
-  id: "G-KKWC3Z231X",
+  property: {
+    id: "G-KKWC3Z231X",
+    router,
+  },
 });
