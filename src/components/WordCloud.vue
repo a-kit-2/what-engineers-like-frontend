@@ -1,13 +1,12 @@
 <template>
   <div class="container text-center">
-    <div class="m-md-5">
-      <img class="logo-img" src="../assets/what_engineers_like_logo.png" />
-      <h1 class="d-inline">エンジニアは何が好き？</h1>
+    <div class="fixed-top mt-5 m-md-5">
+      <h1 class="align-bottom"><img class="logo-img mr-2" src="../assets/what_engineers_like_logo.png" />エンジニアは何が好き？</h1>
     </div>
-    <div class="d-flex align-items-center justify-content-center">
+    <div class="d-flex align-items-center justify-content-center wordcloud">
       <vue-word-cloud style="height: 480px; width: 640px;" :words="words" :color="([, weight]) => (weight > (numOfWords / 100) * 10 ? 'var(--main-color)' : weight > (numOfWords / 100) * 5 ? 'var(--sub-color)' : 'var(--accent-color)')" font-family="Dela Gothic One" />
     </div>
-    <div class="row m-md-5">
+    <div class="row fixed-bottom mx-1 m-md-5">
       <div class="col-md-10">
         <div class="form-group">
           <input v-model="like.name" type="text" class="form-control input-form" id="input" placeholder="エンジニアとして好きなものを自由に入力してください。何度でも入力できます。" />
@@ -103,6 +102,10 @@ export default {
   width: 3rem;
 }
 
+.wordcloud {
+  height: 100vh;
+}
+
 .input-form {
   background-color: var(--font-color);
   border-collapse: var(--font-color);
@@ -123,10 +126,10 @@ export default {
 @media screen and (max-width: 480px) {
   /* 480px以下に適用されるCSS（スマホ用） */
   .logo-img {
-    width: 1rem;
+    width: 1.5rem;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 </style>
