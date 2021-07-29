@@ -1,14 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import VueAnalytics from "vue-analytics";
+import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueAnalytics, {
-  id: "G-KKWC3Z231X",
-  router,
-});
+Vue.use(VueGtag, { config: { id: "G-KKWC3Z231X" } });
 
 new Vue({
   router,

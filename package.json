@@ -18,7 +18,7 @@
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "vue": "^2.6.11",
-    "vue-analytics": "^5.22.1",
+    "vue-gtag": "^1.16.1",
     "vue-router": "^3.5.2",
     "vuewordcloud": "^18.7.12"
   },
