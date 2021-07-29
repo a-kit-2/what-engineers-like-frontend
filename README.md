@@ -1,24 +1,102 @@
-# what-engineers-like-frontend
+# アプリケーション名
 
-## Project setup
-```
-npm install
-```
+エンジニアは何が好き？
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# アプリケーションの概要
 
-### Compiles and minifies for production
-```
-npm run build
-```
+エンジニアに好きな技術を投稿してもらい、その数をもとにワードクラウドを生成します。
+一目でどの技術が人気があるかわかります。
 
-### Lints and fixes files
-```
-npm run lint
-```
+# URL
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[アプリケーション](https://what-engineers-like.herokuapp.com/)
+
+[バックエンド](https://github.com/a-kit-2/what-engineers-like-backend)
+
+# 利用方法
+
+1. エンジニア目線で好きな技術をフォームから投稿します。
+2. 今までのエンジニアが入力したデータからワードクラウドを生成され、今人気の技術を視覚的に知ることができます。
+
+# 目指した課題解決
+
+今のエンジニアの流行りや好きな技術を**一目で**知りたいという問題を解決したい。
+
+# 要件定義
+
+## アウトライン
+
+### 目的
+
+- エンジニアの今好きな技術を集めたい
+- ワードクラウドを利用して一目で人気を知ることができる
+
+### 概要
+
+1. エンジニアが好きな技術を入力する
+2. 入力されたデータをデータベースに保存する
+3. データベースから今までのデータを取得しワードクラウドを制作する
+
+### 使用技術
+
+- Rails API モード
+- Vue.js 2
+- MySQL
+- Heroku
+
+### 機能
+
+- 自分の好きな技術をフォームから入力できる
+- 今まで入力されたデータからワードクラウドを作る
+
+### アイデア
+
+- ユーザー登録不要で入力し放題
+- ワードクラウドで人気技術が一目でわかる
+- 気軽に誰でも入力できる
+
+## マインドマップ
+
+<img width="1341" alt="what-engineers-like-mindmap" src="https://user-images.githubusercontent.com/74124955/127434019-579e45bd-61c2-445f-9ee5-f89645103c95.png">
+
+# 実装した機能についての GIF と説明
+
+# 実装予定の機能
+
+- どれだけの投稿があるのか数値で表示できる様にする。
+- タグをつけて分類する。
+
+# 設計
+
+## ユースケース図
+
+![use_case_diagram](https://user-images.githubusercontent.com/74124955/126922900-e4549c0f-9952-44b7-97d7-87ba07dc3b2a.png)
+
+## DB設計
+
+![er_diagram](https://user-images.githubusercontent.com/74124955/126923589-e35e7c0c-47d0-4dae-bbf8-50705f744c7d.png)
+
+## クラス図 
+
+
+
+## UI設計
+
+![ui_diagram](https://user-images.githubusercontent.com/74124955/126923043-74d97677-d948-4c6f-9c85-2e244214b36b.png)
+
+## URI設計
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+## API設計
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
