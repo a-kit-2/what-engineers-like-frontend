@@ -99,8 +99,8 @@
 
 ## API設計
 
-|  TH  |  TH  |
-| ---- | ---- |
-|  TD  |  TD  |
-|  TD  |  TD  |
+| METHOD | URL         |
+| ------ | ----------- |
+| GET    | /show_likes |
+| POST   | /new_like   |
 
