@@ -24,8 +24,6 @@
 
 # 要件定義
 
-## アウトライン
-
 ### 目的
 
 - エンジニアの今好きな技術を集めたい
@@ -54,8 +52,6 @@
 - ユーザー登録不要で入力し放題
 - ワードクラウドで人気技術が一目でわかる
 - 気軽に誰でも入力できる
-
-## マインドマップ
 
 <img width="1341" alt="what-engineers-like-mindmap" src="https://user-images.githubusercontent.com/74124955/127434019-579e45bd-61c2-445f-9ee5-f89645103c95.png">
 
