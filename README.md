@@ -59,7 +59,9 @@
 
 <img width="1341" alt="what-engineers-like-mindmap" src="https://user-images.githubusercontent.com/74124955/127434019-579e45bd-61c2-445f-9ee5-f89645103c95.png">
 
-# 実装した機能についての GIF と説明
+# 実装した機能についてのGIFと説明
+
+好きな技術を投稿するとデータをもとにワードクラウドを生成する。
 
 # 実装予定の機能
 
