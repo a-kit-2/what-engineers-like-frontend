@@ -99,8 +99,8 @@
 
 ## API設計
 
-| METHOD | URL         |
-| ------ | ----------- |
-| GET    | /show_likes |
-| POST   | /new_like   |
+| METHOD | URL         | DESCRIPTION                           |
+| ------ | ----------- | ------------------------------------- |
+| GET    | /show_likes | 今までのデータを取得する                    |
+| POST   | /new_like   | ユーザーが登録したデータをデータベースに保存する |
 
