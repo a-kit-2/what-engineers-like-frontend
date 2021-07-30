@@ -82,7 +82,7 @@
 
 ## クラス図 
 
-
+![class_diagram](https://user-images.githubusercontent.com/74124955/127587329-1947d00c-f14a-46c1-aed6-7afa8b4e2fcb.png)
 
 ## UI設計
 
