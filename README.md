@@ -11,9 +11,9 @@
 
 # URL
 
-[アプリケーション](https://what-engineers-like.herokuapp.com/)
+アプリケーション： https://what-engineers-like.herokuapp.com
 
-[バックエンド](https://github.com/a-kit-2/what-engineers-like-backend)
+バックエンド： https://github.com/a-kit-2/what-engineers-like-backend
 
 # 利用方法
 
